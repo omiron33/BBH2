@@ -1,0 +1,49 @@
+
+<div id="menu-bar">
+    <%= image_tag("bbh.png", size: "122x58") %>
+    <!-- <%= image_tag("att.png", size: "141x58") %> -->
+    <p>Partner Services Exchange</p>
+    <% if user_signed_in? %>
+        <div id="navigation">
+        <p id="welcome_name">Welcome <%= current_user.first_name %></p>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropdown-content">
+                        <% if current_user %>
+                            <% unless current_page?(root_path)%>
+                                    <a href="/">Dashboard</a>
+                            <% end %>
+                            <a href="/referrals/new">Submit Referral</a>
+                            <a href="/faq">F.A.Q.</a>
+                            <a href="/users/sign_out" data-method="delete">Logout</a>     
+                        <% end %>
+                    </div>
+                </div>
+
+    <% else %>
+        <% if current_page?(new_user_session_path) %>
+
+            <button id="show_login" class="dropbtn">Log In</button>
+        <% end %>
+            
+    
+    <% end %>
+
+</div>
+
+
+  
+
+        
+    
+
+
+
+
+
+
+
+
+
+

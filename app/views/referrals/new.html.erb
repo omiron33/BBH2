@@ -1,0 +1,342 @@
+<div id="property_form">
+    <form action="/properties" method="post" class="input-group wrapper">
+        <div id="prop_info" class="prop_section">
+            <h3 class="col_2">Property Information</h3>
+            <div class="col_1">
+                <div class="form-group">
+                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                    <label for="property[name]">Property Name</label>
+                    <input type="text" class="form-control" name="property[name]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[code]">Property Code</label>
+                    <input type="text" class="form-control" name="property[code]">
+                </div>
+                <div class="form-group">
+                    <label for="property[kind]">Property Type</label>
+                    <select class="form-control" name="property[kind]">
+                        <option value="Hotel">Hotel</option>
+                        <option value="Timeshare">Timeshare</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Senior Community">Senior Community</option>
+                        <option value="Condominium">Condominium</option>
+                        <option value="Campground / RV Park">Campground / RV Park</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Retail">Retail</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col_2">
+                <div class="form-group">
+                    <label for="property[address]">Property Address</label>
+                    <input type="text" class="form-control" name="property[address]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[city]">City</label>
+                    <input type="text" class="form-control" name="property[city]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[state]">State</label>
+                    <input type="text" class="form-control" name="property[state]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[zip_code]">Zip Code</label>
+                    <input type="text" class="form-control" name="property[zip_code]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[property_phone]">Property Phone Number</label>
+                    <input type="text" class="form-control" name="property[property_phone]">
+                </div>
+            </div>
+            <div class="col_3">
+                <div class="form-group">
+                    <label for="property[contact_name]">Contact Name</label>
+                    <input type="text" class="form-control" name="property[contact_name]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[title]">Contact Title</label>
+                    <input type="text" class="form-control" name="property[title]">
+                </div>
+                <div class="form-group">
+                    <label for="property[email]">Contact Email</label>
+                    <input type="text" class="form-control" name="property[email]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[contact_phone]">Contact Phone Number</label>
+                    <input type="text" class="form-control" name="property[property_phone]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[contact_mobile]">Contact Mobile Phone Number</label>
+                    <input type="text" class="form-control" name="property[contact_mobile]">
+                </div>
+                <div class="form-group">
+                    <label for="property[mgmt_co]">Property Management Company</label>
+                    <input type="text" class="form-control" name="property[mgmt_co]">
+                </div>
+            </div>
+            <input type="button" value="Next Page" class="col_2 btn btn-primary">
+        </div>
+        <div id="prop_phys" class="prop_section">
+            <h3 class="col_2">Property Physical Information</h3>
+            <div class="col_1">
+                <div class="form-group">
+                    <label for="property[property_status]">Status of Property</label>
+                    <select class="form-control" name="property[property_status]">
+                        <option value="Operational">Operational</option>
+                        <option value="Under Construction">Under Construction</option>
+                        <option value="Under Renovation">Under Renovation</option>
+                        <option value="Hotel Conversion">Hotel Conversion</option>
+                    </select>
+                </div>
+                <div id="prop_lvc">
+                    <div class="form-group">
+                        <label for="property[property_status_lvc]">Target Opening Date</label>
+                        <input type="date" name="property[property_status_open]">
+                    </div>
+                    <div class="checkbox">
+                        <label for="property[property_status_lvc]">
+                        <input type="checkbox" name="property[property_status_lvc]" value="true"><span> Check to request a BBH quote for <br>a Low Voltage Cabling Contract?</span></label>
+                    </div>
+                </div>
+                <div id="prop_conversion" class="form-group">
+                    <label for="property[property_status_conversion]">What is converting?</label>
+                    <input type="text" class="form-control" name="property[property_status_conversion]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[units]">Number of Rooms or Units</label>
+                    <input type="text" class="form-control" name="property[units]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[buildings]">Number of Buildings</label>
+                    <input type="text" class="form-control" name="property[buildings]" placeholder="Required">
+                </div>
+                <div class="form-group">
+                    <label for="property[floors]">Number of Floors / Building</label>
+                    <input type="text" class="form-control" name="property[floors]" placeholder="Required">
+                </div>
+            </div>
+            <div class="col_2">
+                <div class="form-group">
+                    <label for="property[int_construction]">Interior Construction</label>
+                    <select class="form-control" name="property[int_construction]">
+                        <option value="Wood Studs with Sheet Rock">Wood Studs with Sheet Rock</option>
+                        <option value="Metal Studs with Sheet Rock">Metal Studs with Sheet Rock</option>
+                        <option value="Interior Concrete Walls">Interior Concrete Walls</option>
+                        <option value="Interior Cinder Block Walls">Interior Cinder Block Walls</option>
+                        <option value="Other">Other (Comment Below)</option>   
+                    </select>
+                </div>
+                <div class="form-group" id="int_con_comm">
+                    <label for="property[int_construction_comment]">Interior Construction Comment</label>
+                    <input type="text" class="form-control" name="property[int_construction_comment]">
+                </div>
+                <div class="form-group">
+                    <label for="property[hallways]">Hallways</label>
+                    <select class="form-control" name="property[hallways]">
+                        <option value="Interior Drop Ceiling">Interior Drop Ceiling</option>
+                        <option value="Interior Hard Ceiling">Interior Hard Ceiling</option>
+                        <option value="Interior With Alternating Hard/Drop Ceilings">Interior With Alternating Hard/Drop Ceilings</option>
+                        <option value="Interior with both Drop/Hard Ceilings">Interior with both Drop/Hard Ceilings</option>
+                        <option value="Exterior Walkway">Exterior Walkway</option>
+                        <option value="Other">Other (Comment Below)</option>
+                    </select>
+                </div>
+                <div class="form-group" id="hallway_comm">
+                    <label for="property[hallways_comment]">Hallway Comment</label>
+                    <input type="text" class="form-control" name="property[hallways_comment]">
+                </div>
+                <div class="form-group">
+                    <label for="property[ceil_construction]">Ceiling Constuction</label>
+                    <select class="form-control" name="property[ceil_construction]">
+                        <option value="Wood">Wood</option>
+                        <option value="Wood With Concrete Layer">Wood with Concrete Layer</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Concrete, Rebar">Concrete, Rebar</option>
+                        <option value="Other">Other (Comment Below)</option>
+                    </select>
+                </div>
+                <div class="form-group" id="ceil_con_comm">
+                    <label for="property[ceil_construction_comment]">Ceiling Construction Comment</label>
+                    <input type="text" class="form-control" name="property[ceil_construction_comment]">
+                </div>
+            </div>
+            <div class="col_3">
+                <div class="checkbox">
+                    <label for="property[accessible_attic]"><input type="checkbox" name="property[accessible_attic]" value="true"> Accessible Attic Space?</label>
+                    
+                </div>
+                <div class="checkbox">
+                    <label for="property[accessible_chaise]"><input type="checkbox" name="property[accessible_chaise]" value="true"> Accessible Chaise Way Between Rooms?</label>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="property[ext_construction]">Exterior Construction</label>
+                    <select class="form-control" name="property[ext_construction]">
+                        <option value="Wood Frame">Wood Frame</option>
+                        <option value="Brick">Brick</option>
+                        <option value="Concrete">Concrete</option>
+                        <option value="Concrete / Rebar">Concrete / Rebar</option>
+                        <option value="Combination of Brick and Concrete">Combination of Brick and Concrete</option>
+                        <option value="Other">Other (Comment Below)</option>
+                    </select>
+                </div>
+                <div class="form-group" id="ext_con_comm">
+                    <label for="property[ext_construction_comment]">Exterior Construction Comment</label>
+                    <input type="text" class="form-control" name="property[ext_construction_comment]">
+                </div>
+            </div>
+            <input type="button" value="Back" class="col_2 btn btn-primary">
+            <input type="button" value="Next Page" class="col_3 btn btn-primary">
+        </div>
+        <div id="selection" class="prop_section">
+            <h2 class="col_1_triple">Please choose which scopes of work you are referring</h2>
+            <div class="col_1_triple">
+                <div class="checkbox">
+                    <label for="fiber_check">
+                        <input type="checkbox" name="fiber_check" value="true"> Fiber</label>
+                </div>
+                <div class="checkbox">
+                    <label for="net_check">
+                        <input type="checkbox" name="net_check" value="true"> Network/Wi-Fi</label>
+                </div>
+                <div class="checkbox">
+                    <label for="lvc_check">
+                        <input type="checkbox" name="lvc_check" value="true"> Low Voltage</label>
+                </div>
+                <div class="checkbox">
+                    <label for="CCTV_check">
+                        <input type="checkbox" name="CCTV_check" value="true"> CCTV</label>
+                </div>
+                <div class="checkbox">
+                    <label for="pbx_check">
+                        <input type="checkbox" name="pbx_check" value="true"> PBX/SIP Trunks</label>
+                </div>
+        </div>
+        <div id="fiber_div" class="col_1_triple">
+            <p>---------------------------------------</p>
+            <h1>Fiber Placeholder</h1>
+            <p>---------------------------------------</p>
+        </div>
+        <div id="net_inf" class="col_1_triple">
+            <h3 class="col_2">Network Infrastructure</h3>
+            <div class="col_1">
+                <label for="property[multiple_buildings]"> <input type="checkbox" name="property[multiple_buildings]" value="true" /> Multiple Buildings?</label>
+                
+                <div id="mult_build">
+                    <label for="property[multiple_buildings_comment]">How are they connected?</label>
+                    <input type="text" class="form-control" name="property[multiple_buildings_comment]">
+                </div>
+                <label for="property[wired_ethernet]"><input type="checkbox" name="property[wired_ethernet]" value="true" /> Is there wired ethernet to the rooms?</label>
+                
+                <div id="wired_enet">
+                    <label for="property[wired_ethernet_type]">Type of wiring?</label>
+                    <input type="text" class="form-control" name="property[wired_ethernet_type]">
+                    <label for="property[wired_ethernet_split_pair]"><input type="checkbox" name="property[wired_ethernet_split_pair]" value="true" /> Current Cabling Split Pair?</label>
+                    <label for="property[wired_ethernet_support]"><input type="checkbox" name="property[wired_ethernet_support]" value="true" /> Do wired connections need to be supported?</label>  
+                    <label for="property[wired_ethernet_reuse]"> <input type="checkbox" name="property[wired_ethernet_reuse]" value="true" /> Can current cabling be reused</label>     
+                </div>
+            </div>
+            <div class="col_2">
+                <label for="property[wifi]"><input type="checkbox" name="property[wifi]" value="true" /> Is there WiFi currently?</label>
+                
+                <label for="property[guest_accessible_devices]">Number of guest accessible devices? (Printers, PC's, etc.)</label>
+                <input type="text" class="form-control" name="property[guest_accessible_devices]">
+                <label for="new_con_check"> <input type="checkbox" name="new_con_check" value="true" /> Is this a new construction?</label>
+                
+                <div id="new_con_data">
+                    <label for="property[new_const_wiring_plan]">Indicate new construction wiring plan</label>
+                    <input type="text" class="form-control" name="property[new_const_wiring_plan]">
+                    <label for="property[data_drops]">How many data drops will be going to rooms?</label>
+                    <input type="text" class="form-control" name="property[data_drops]">
+                    <label for="property[data_drops_comment]">Explain below if more than 2 data drops</label>
+                    <input type="text" class="form-control" name="property[data_drops_comment]">
+                </div>
+                <label for="property[telecom_closet_floor]">What floor is MDF/Telecom closet located?</label>
+                <input type="text" class="form-control" name="property[telecom_closet_floor]">
+                <label for="property[idf_total_floor]">Please list what floors have IDF.</label>
+                <input type="text" class="form-control" name="property[idf_total_floor]">
+                <label for="property[cabling_method_data]">Indicate cabling method cnnecting MDF to IDFs for Data</label>
+                <input type="text" class="form-control" name="property[cabling_method_data]">
+                <label for="property[cabling_method_voice]">Indicate cabling method connecting MDF to IDFs for Voice</label>
+                <input type="text" class="form-control" name="property[cabling_method_voice]">
+                <label for="property[cabling_method_other]">Indicate cabling method connecting MDF to IDFs for Other</label>
+                <input type="text" class="form-control" name="property[cabling_method_other]">
+            </div>
+            <div class="col_3">
+                <label for="property[wifi_devices]">Indicate manufacturer and models of devices for current WiFi network (qty of each device and location of each device)</label>
+                <textarea class="form-control" name="property[wifi_devices]" rows="4" cols="50"></textarea>
+                <label for="property[internet_provider]">Current Internet Provider</label>
+                <input type="text" class="form-control" name="property[internet_provider]">
+                <label for="property[internet_provider_upstream]">Upstream Speed</label>
+                <input type="text" class="form-control" name="property[internet_provider_upstream]">
+                <label for="property[internet_provider_downstream]">Downstream Speed</label>
+                <input type="text" class="form-control" name="property[internet_provider_downstream]">
+                <label for="property[internet_provider_type]">Current Provider Type</label>
+                <input type="text" class="form-control" name="property[internet_provider_type]" placeholder="e.g. Fiber / Broadband / DSL">
+                <label for="property[internet_provider_comments]">Comments</label>
+                <input type="text" class="form-control" name="property[internet_provider_comments]">
+            </div>
+        </div>
+        <div id="coverage" class="col_1_triple">
+            <h3 class="col_2">Coverage Areas</h3>
+            <div class="col_1">
+                <p>Common Coverage Areas</p>
+                <label for="property[coverage_area_one]"><input type="text" class="form-control" name="property[coverage_area_one]"> sq ft.</label>
+                <label for="property[coverage_area_two]"><input type="text" class="form-control" name="property[coverage_area_two]"> sq ft.</label>
+                <label for="property[coverage_area_three]"><input type="text" class="form-control" name="property[coverage_area_three]"> sq ft.</label>
+                <label for="property[coverage_area_four]"><input type="text" class="form-control" name="property[coverage_area_four]"> sq ft.</label>
+            </div>
+            <div class="col_2">
+                <label for="meeting_rooms_covered"><input type="checkbox" name="meeting_rooms_covered" value="true" /> Meeting rooms covered?</label>
+                <div id="meeting_rooms_cov">
+                    <label for="property[meeting_rooms_number]">How Many?</label>
+                    <input type="text" class="form-control" name="property[meeting_rooms_number]">
+                    <label for="property[meeting_rooms_footage]">Avg Sq Ft for meeting rooms</label>
+                    <input type="text" class="form-control" name="property[meeting_rooms_footage]">
+                </div>
+            </div>
+            <div class="col_3">
+                <label for="property[back_office_wifi]"><input type="checkbox" name="property[back_office_wifi]" value="true" /> Will back office network be part of WiFi?</label>
+                <label for="property[back_office_covered]"><input type="checkbox" name="property[back_office_covered]" value="true" /> Is back office/admin WiFi covereage desired?</label>
+            </div>
+        </div>
+        <div id="pms" class="col_1_triple">
+            <h3 class="col_2">(PMS) Property Management System</h3>
+            <div class="col_1">
+                <label for="property[hsia_int_req]"><input type="checkbox" name="property[hsia_int_req]" value="true" /> HSIA Integration with PMS System Required?</label>
+                <label for="property[pbx_int_req]"><input type="checkbox" name="property[pbx_int_req]" value="true" /> PBX Integration with PMS System Required?</label>
+                <label for="property[gre_int_req]"><input type="checkbox" name="property[gre_int_req]" value="true" /> GRE/OTT Integration with PMS System Required?</label>
+                <label for="property[pms_manufacturer]">PMS Manufacturer</label>
+                <input type="text" class="form-control" name="property[pms_manufacturer]">
+            </div>
+            <div class="col_2">
+                <label for="property[pms_contact_name]">Contact Name</label>
+                <input type="text" class="form-control" name="property[pms_contact_name]">
+                <label for="property[pms_contact_phone]">Contact Phone</label>
+                <input type="text" class="form-control" name="property[pms_contact_phone]">
+                <label for="property[pms_contact_email]">Contact Email</label>
+                <input type="text" class="form-control" name="property[pms_contact_email]">
+            </div>
+            <div class="col_3">
+                <label for="property[final_comments]">Any additional comments?</label>
+                <textarea class="form-control" name="property[final_comments]" rows="10" col="75"></textarea>
+            </div>     
+        </div>
+    </form>
+    <div id="lvc_div" class="col_1_triple">
+        <p>---------------------------------------</p>
+        <h1 class="col_1_triple"> LVC Placeholder</h1>
+        <p>---------------------------------------</p>
+    </div>
+    <div id="CCTV_div" class="col_1_triple">
+        <p>---------------------------------------</p>
+        <h1 class="col_1_triple">CCTV Placeholder</h1>
+        <p>---------------------------------------</p>
+    </div>
+    <div id="pbx_div" class="col_1_triple">
+        <p>---------------------------------------</p>
+        <h1 class="col_1_triple">PBX Placeholder</h1>
+        <p>---------------------------------------</p>
+    </div>
+    <input type="submit" class="btn btn-primary col_3" value="Submit">
+</div>

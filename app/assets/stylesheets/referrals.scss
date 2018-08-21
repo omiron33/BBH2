@@ -1,0 +1,94 @@
+// Place all the styles related to the Properties controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.prop_section {
+    margin-left: 100px;
+    width: 90%;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsla(304, 15%, 95%, 0.2);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.prop_section form {
+    padding: 20px;
+}
+.prop_section input:not([type="checkbox"]) {
+    width: 80%;
+}
+.prop_section select {
+    width: 80%;
+}
+
+#prop_phys, #net_inf, #coverage, #pms, #mult_build, #wired_enet, #new_con_data, #meeting_rooms_cov, #prop_lvc, #prop_conversion, #int_con_comm, #hallway_comm, #ceil_con_comm, #ext_con_comm, #selection, #fiber_div, #lvc_div, #CCTV_div, #pbx_div {
+    display: none;
+}
+
+#prop_lvc {
+    margin-bottom: 15px;
+}
+
+#fiber_div, #lvc_div, #CCTV_div, #pbx_div, #net_inf, #coverage, #pms {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+input {
+    margin-bottom: 8px;
+}
+label {
+    margin-bottom: 1px;
+}
+.col_1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.col_2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.col_3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.col_1_triple {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.col_1_triple div {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+table {
+    width: 90%;
+}
+
+#show_wrapper table thead th {
+    font-size: x-large;
+    color: lightskyblue;
+}
+
+#show_wrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+#pdf_button {
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 30px;
+    justify-self: center;
+}
+
+
+

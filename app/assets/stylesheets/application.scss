@@ -1,0 +1,201 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+html { 
+  background: image-url('network.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html body {
+    background-color: hsla(0,0%,0%,0.40);
+    color: lightskyblue;
+}
+
+#notice_wrapper {
+    width: 40%;
+    background-color: pink;
+    color: red;
+    margin: 0px auto;
+}
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: white;
+    border: none;
+    padding: 16px;
+    margin: 0px 8px;
+    font-size: 16px;
+    color: black;
+    width: 150px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: darkgrey;
+}
+
+#show_login {
+    width: 80px;
+    height: 40px;
+    clear: both;
+    float: right;
+}
+
+#login_form {
+    background: white;
+    padding: 20px;
+    position: absolute;
+    right: 1px;
+    top: 71px;
+    font-size: small;
+    overflow: hidden;
+    width: 230px;
+    box-shadow: 0px 0px 1px 100vmax rgba(0,0,0,0.6);
+    color: black;
+    transition: all 0.5s linear;
+}
+
+#login_form input[type="submit"] {
+    width: 100%;
+}
+
+#menu-bar {
+    height: 70px;
+    border-bottom: 1px solid lightgrey;
+    padding: 5px 20px;
+    background-color: white;
+
+}
+
+
+
+
+
+
+#menu-bar p {
+    display: inline-block;
+    font-size: x-large;
+    color: lightskyblue;
+    padding: 10px 0px 0px 20px;
+}
+
+#menu-bar img:nth-child(2) {
+    margin-left: 40px;
+}
+#navigation {
+    float: right;
+}
+
+#navigation p {
+    font-size: small;
+    vertical-align: bottom;
+}
+
+.field {
+    padding: 10px;
+}
+
+.field input {
+    border-radius: 25px;
+    padding-left: 20px;
+}
+
+.field input:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+#linkbox * {
+    display: block;
+    padding-top: 5px;
+}
+
+.wrapper {
+    padding: 20px;
+    background-color: hsla(39, 5%, 25%, 0.8);
+    color: white;
+    height: calc(100vh - 70px);
+}
+
+#error_alert {
+    margin-left: 300px;
+    width: 500px;
+    height: 200px;
+    overflow: scroll;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+span {
+    color: lightskyblue;
+}
+
+.bootstrap_form {
+    width: 33%;
+    margin: 0 auto;
+}
+
+.bootstrap_form input[type="submit"] {
+    width: 50%;
+}
+
+
+.is_hidden {
+    opacity: 0;
+}
